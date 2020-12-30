@@ -222,3 +222,6 @@ main {
 .consultation .pricing__card__price {
   margin-top: auto;
 }
+
+@media screen and (max-width: 768px) {
+}
