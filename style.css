@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 :root {
   --color-btn: #0b48a8;
@@ -14,7 +14,7 @@
 
 body {
   background: #fbf7ee;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   width: 85%;
   margin: 0 auto;
 }
@@ -52,6 +52,7 @@ nav ul a {
 }
 
 main {
+  position: relative;
   display: flex;
   margin-top: 2rem;
   align-items: center;
@@ -78,7 +79,7 @@ main {
   color: #8a8a8a;
   border: 1px solid #b5b5b5;
   padding: 10px 10px;
-  width: 350px;
+  width: 100%;
   margin-right: 1rem;
 }
 
@@ -224,4 +225,80 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .main--right {
+    display: none;
+  }
+
+  .main--left {
+    width: 100%;
+  }
+
+  .main--left__leading {
+    font-size: 3rem;
+  }
+
+  .main--left__form__input {
+    margin-bottom: 1rem;
+  }
+
+  .main--left__extras {
+    align-items: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav img {
+    width: 110px;
+  }
+
+  .features,
+  .pricing__cards {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .pricing {
+    width: 90%;
+  }
+
+  .features__card,
+  .pricing__card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .main--left {
+    width: 60%;
+  }
+  .main--right__img {
+    position: absolute;
+    height: 80%;
+    top: 45%;
+    transform: translateY(-50%);
+    right: -150px;
+
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    justify-items: center;
+    gap: 1rem;
+}
 }
